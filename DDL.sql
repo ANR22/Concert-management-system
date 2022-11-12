@@ -31,7 +31,7 @@ CREATE TABLE User
 CREATE TABLE Ticket
 (
   Ticket_id INT NOT NULL,
-  Price enum(500,1000,1500) NOT NULL,
+  Price Float NOT NULL,
   Seat_no INT NOT NULL,
   concert_name VARCHAR(20) NOT NULL,
   ticket_type enum('gold','platinum','vip') NOT NULL,
