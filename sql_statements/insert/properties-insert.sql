@@ -1,8 +1,3 @@
-'mike'
-'speaker'
-'screen'
-
-
 insert into properties value (10001,'mike',10,1500); 
 insert into properties value (10002,'mike',7,1500); 
 insert into properties value (10003,'mike',9,1500); 
