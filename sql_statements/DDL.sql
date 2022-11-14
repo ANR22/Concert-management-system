@@ -37,9 +37,9 @@ CREATE TABLE Ticket
   ticket_type enum('gold','platinum','vip') NOT NULL,
   concert_id INT NOT NULL,
   user_id INT,
-  PRIMARY KEY (Ticket_id),
-  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id),
-  FOREIGN KEY (user_id) REFERENCES User(user_id)
+  PRIMARY KEY (Ticket_id,concert_id),
+  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE
 );
 
 CREATE TABLE properties
@@ -49,7 +49,7 @@ CREATE TABLE properties
   quantity INT NOT NULL,
   price_per_unit FLOAT NOT NULL,
   PRIMARY KEY (concert_id,prop_name),
-  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id)
+  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id) ON DELETE CASCADE
 );
 
 CREATE TABLE performed_by
@@ -58,8 +58,8 @@ CREATE TABLE performed_by
   artist_id INT NOT NULL,
   fee FLOAT NOT NULL,
   PRIMARY KEY (concert_id, artist_id),
-  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id),
-  FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+  FOREIGN KEY (concert_id) REFERENCES Concert(concert_id) ON DELETE CASCADE,
+  FOREIGN KEY (artist_id) REFERENCES Artist(artist_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Artist_Instrument
@@ -67,5 +67,5 @@ CREATE TABLE Artist_Instrument
   Instrument VARCHAR(50) NOT NULL,
   artist_id INT NOT NULL,
   PRIMARY KEY (Instrument, artist_id),
-  FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+  FOREIGN KEY (artist_id) REFERENCES Artist(artist_id) ON DELETE CASCADE
 );
