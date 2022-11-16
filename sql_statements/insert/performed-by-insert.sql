@@ -9,7 +9,6 @@ insert into performed_by values(10002,1246,55000);
 insert into performed_by values(10003,1236,65000);
 insert into performed_by values(10003,1237,10000);
 insert into performed_by values(10003,1238,65000);
-insert into performed_by values(10003,1242,12000);
 insert into performed_by values(10003,1247,60000);
 insert into performed_by values(10004,1242,68000);
 insert into performed_by values(10004,1247,42000);

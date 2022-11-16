@@ -1,10 +1,15 @@
 DELIMITER $$
-CREATE FUNCTION calc_prop_cost(concert_id INT)
+CREATE FUNCTION is_performing(artist_id INT,date_time TimeStamp)
 RETURNS INT
 BEGIN
-DECLARE cost INT;
-SET cost = (SELECT SUM(quantity*price_per_unit) FROM properties as p WHERE p.concert_id=concert_id);
-RETURN cost;
+DECLARE performing INT;
+insert into dummy values(date(date_time));
+SET performing = (SELECT COUNT(*) 
+FROM concert c,performed_by p
+where c.concert_id=p.concert_id and  
+date(c.Date_time)=date(date_time) and
+p.artist_id=artist_id);
+RETURN performing;
 END
 $$
 DELIMITER ;
