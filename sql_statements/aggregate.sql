@@ -14,7 +14,9 @@ from artist_instrument
 group by artist_id
 having artist_id = 1235;
 
---4. Find the the average number of songs sung by male and female artists
-select gender,round(avg(num_of_songs)) as avg_num_songs
-from artist
-group by gender;
+--4. Find the the average of total cost of properties for concerts that took place in 'Bengaluru'
+select avg(total_cost) as avg_total_cost
+from prop_cost p, concert c
+where p.concert_id = c.concert_id
+and c.city = 'Bengaluru'
+group by c.city;
