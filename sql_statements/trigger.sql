@@ -18,5 +18,3 @@ END IF;
 END
 $$
 DELIMITER ;
-
-
