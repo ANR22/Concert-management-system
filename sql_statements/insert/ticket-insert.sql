@@ -17,6 +17,3 @@ insert into ticket values (100041,32,1500,'Musical Fest','vip',10004,7890);
 insert into ticket values (100042,1,500,'Musical Fest','gold',10004,7892);
 insert into ticket values (100043,12,500,'Musical Fest','gold',10004,7893);
 insert into ticket values (100044,4,1000,'Musical Fest','platinum',10004,7899);
-insert into ticket values (100051,4,1000,'Musical Fest','platinum',10005,NULL);
-insert into ticket values (100052,8,500,'Musical Fest','gold',10005,NULL);
-insert into ticket values (100053,3,1500,'Musical Fest','vip',10005,NULL);

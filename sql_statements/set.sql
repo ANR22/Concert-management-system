@@ -7,7 +7,7 @@ select t.user_id
 from ticket t, concert c
 where t.concert_id = c.concert_id and c.theme='Rock' and Date_time like '2022-11-%';
 
---2. Artists who charged fee greater than 30000 and playes more than 2 instruments
+--2. Artists who charged fee greater than 30000 and plays more than 2 instruments
 select artist_id,artist_name
 from artist natural join artist_instrument
 group by artist_id
