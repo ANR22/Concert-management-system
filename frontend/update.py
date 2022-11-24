@@ -17,8 +17,8 @@ def update():
         user_id = selected_result[0]
         name = selected_result[1]
         date_of_birth = selected_result[2]
-        is_admin = selected_result[3]
-        ph_no = selected_result[4]
+        is_admin = selected_result[4]
+        ph_no = selected_result[3]
 
         # Layout of Create
 

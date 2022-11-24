@@ -6,7 +6,7 @@ import streamlit as st
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    database="concert_management_system"
+    database="cs625_cms"
 )
 
 
